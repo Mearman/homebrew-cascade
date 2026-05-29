@@ -30,6 +30,7 @@ class Cascade < Formula
 
   def install
     bin.install "cascade"
+    bin.install_symlink bin/"cascade" => "cscd"
   end
 
   test do
