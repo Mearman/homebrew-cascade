@@ -4,31 +4,38 @@
 class Cascade < Formula
   desc "Cross-platform cloud storage filesystem client"
   homepage "https://github.com/Mearman/cascade"
-  version "0.1.59"
+  version "0.1.60"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.59/cascade-aarch64-macos.tar.gz"
-      sha256 "19fd06fd51dc77af299702dbd30083588d6e2c7dbb33d13b98479e76a4b1a172"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.60/cascade-aarch64-macos.tar.gz"
+      sha256 "2c4a274aa82735d72c9dbb426d17d9ccc2feb821c9b865aa5b5adbb06416d9a6"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.59/cascade-x86_64-macos.tar.gz"
-      sha256 "b64645e72516db7b7a8044a965b60bd3d8f72e07f60f01da480ca6e115c40d3d"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.60/cascade-x86_64-macos.tar.gz"
+      sha256 "c33464169b3fccfc25825b7a65e67376fe371cecaea499ce7ac06bd5672b4ceb"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.59/cascade-aarch64-linux.tar.gz"
-      sha256 "5fb92e97f8b153a8a3f8156498e1622114e3ac34508688a6ada766954505a920"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.60/cascade-aarch64-linux.tar.gz"
+      sha256 "da59b25e383e3c35558583a15d36929585f4ba8e17946d540977bf1e1388fd2e"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.59/cascade-x86_64-linux.tar.gz"
-      sha256 "0a9ab16f86f0b1810c15e98b11cff287921f0cc586d064d11665782977ca9caf"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.60/cascade-x86_64-linux.tar.gz"
+      sha256 "268a2f1277b5256b98dc4d9622b7a7ddccc4026e8124b3662f043b5f27251be3"
     end
   end
 
   def install
     bin.install "cascade"
+  end
+
+  service do
+    run [opt_bin/"cascade", "start"]
+    keep_alive true
+    log_path var/"log/cascade.log"
+    error_log_path var/"log/cascade.err.log"
   end
 
   test do
