@@ -4,26 +4,26 @@
 class Cascade < Formula
   desc "Cross-platform cloud storage filesystem client"
   homepage "https://github.com/Mearman/cascade"
-  version "0.1.90"
+  version "0.1.91"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.90/cascade-aarch64-macos.tar.gz"
-      sha256 "36dd9b4e2ad45817565a546d0d928c20e6690baae96a9072ebc5f05f66af23c2"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.91/cascade-aarch64-macos.tar.gz"
+      sha256 "3333dc3a1d7f6349f0e411cda9c0f576e165956093a80e1dd1b4de59e3395867"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.90/cascade-x86_64-macos.tar.gz"
-      sha256 "9210b056d1f279198176cc790c71a517afee72423caf7ecf0c0adefbd45cf790"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.91/cascade-x86_64-macos.tar.gz"
+      sha256 "6124a6d41e83682b1108b759d1287205be526c3003f686d1a1d4cf58f05f8339"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.90/cascade-aarch64-linux.tar.gz"
-      sha256 "ca08e235fe11482c2e8b6d3647ad82dcfc019a5958395806f9fded43077eba6a"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.91/cascade-aarch64-linux.tar.gz"
+      sha256 "8dd89a89743e980c3f6907500b744de310a6d2d01af3d8eb2ad7adde4efd89c0"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.90/cascade-x86_64-linux.tar.gz"
-      sha256 "a5fa73cd6f1cdb84e6f048a54393844d7c07a8ab14e1623582019f4ac7e49f43"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.91/cascade-x86_64-linux.tar.gz"
+      sha256 "4643191b492254f1a66ae567a68b6463b7c0979730f54a383394b0b2db3280f8"
     end
   end
 
