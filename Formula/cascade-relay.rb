@@ -4,26 +4,26 @@
 class CascadeRelay < Formula
   desc "Opaque byte-pipe relay server for Cascade peers behind NATs"
   homepage "https://github.com/Mearman/cascade"
-  version "0.1.113"
+  version "0.1.114"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.113/cascade-relay-aarch64-macos.tar.gz"
-      sha256 "3d78e2dac84b25e50d72e7f217768ea78bc376238b5cd51b0b16aa7bc2b1e5a7"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.114/cascade-relay-aarch64-macos.tar.gz"
+      sha256 "941a2febc8f81650ec732230938f8dcaec266dc5a9563ac9d6264d4a88c48247"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.113/cascade-relay-x86_64-macos.tar.gz"
-      sha256 "578a311ec61738c76bf0e3081e895d88176ec9518223ccf359a9c2705ee6577b"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.114/cascade-relay-x86_64-macos.tar.gz"
+      sha256 "6da06ec7a128d6a286a211f0601d66871b473225450c90fe1f00402a93015086"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.113/cascade-relay-aarch64-linux.tar.gz"
-      sha256 "f185310444286e62b0b3b9fb5a79d4ddfdd1493d3eec8d145bdb86d06a1e3294"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.114/cascade-relay-aarch64-linux.tar.gz"
+      sha256 "c7a2ca6726b6134c26dfa7ed268fb8f77053fb60981f5917124e8ee3d2239015"
     else
-      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.113/cascade-relay-x86_64-linux.tar.gz"
-      sha256 "2ac8110e66a7eb9a60618389953a039ac3b8e9263ac0c634bed3baebb3d08199"
+      url "https://github.com/Mearman/cascade/releases/download/cascade-v0.1.114/cascade-relay-x86_64-linux.tar.gz"
+      sha256 "49fc4ed4416349bb0cf27951d99f075864b648ecd049597c471e2e23fc453f56"
     end
   end
 
